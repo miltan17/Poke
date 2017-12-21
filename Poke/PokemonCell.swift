@@ -13,4 +13,9 @@ class PokemonCell: UICollectionViewCell {
     @IBOutlet weak var pokemonId: UIImageView!
     @IBOutlet weak var pokemonName: UILabel!
     
+    
+    func loadPokemonToTheView(pokemon: Pokemon){
+        pokemonId.image = UIImage(named: "\(pokemon.pokemonId)")
+        pokemonName.text = pokemon.pokemonName
+    }
 }
